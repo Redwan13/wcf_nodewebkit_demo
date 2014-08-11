@@ -6,7 +6,8 @@ namespace HelloWorldDemoService
     [ServiceContract]
     public interface IHelloWorldService
     {
-        [WebGet(UriTemplate = "/helloworld",ResponseFormat = WebMessageFormat.Json)]
-        string SayHelloWorld();
+        [OperationContract]
+        [WebGet (UriTemplate = "/helloworld", ResponseFormat = WebMessageFormat.Json)]
+        string SayHelloWorld ();
     }
 }
